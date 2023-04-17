@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delay Refund</title>
+</head>
+<body>
+    <script>
+        var fare = 100;
+        var refund;
+        var t;
+        t=200;
+
+        if(t < 30){
+        refund = 0;
+        }
+        else if(t > 30 && t <= 120){
+        refund = (10/fare)*100;
+        }
+        else if(t > 120 && t <= 300){
+        refund = (20/fare)*100;
+        }
+        else if(t > 300){
+        refund = (50/fare)*100;
+        }
+        else{
+           refund = -1;
+        }
+
+        document.write("Refund Value: $" + refund);
+    </script>
+</body>
+</html>
